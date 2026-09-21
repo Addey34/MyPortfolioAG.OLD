@@ -1,9 +1,9 @@
 import type { Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
+import defaultTheme from 'tailwindcss/defaultTheme'
 import scrollbarHide from 'tailwind-scrollbar-hide'
 
 const config = {
-  darkMode: ['class'],
+  darkMode: ['class', '.dark'],
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   prefix: '',
   theme: {
@@ -56,7 +56,7 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       fontFamily: {
-        sans: ['Inter', ...fontFamily.sans],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       keyframes: {
         'accordion-down': {
