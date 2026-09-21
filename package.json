@@ -10,8 +10,11 @@
     "build": "astro build",
     "dev": "astro dev",
     "format": "prettier -w . --cache",
+    "format:check": "prettier --check .",
     "preview": "astro preview",
-    "start": "astro dev"
+    "start": "astro dev",
+    "typecheck": "tsc --noEmit",
+    "verify": "pnpm run format:check && pnpm run typecheck"
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
